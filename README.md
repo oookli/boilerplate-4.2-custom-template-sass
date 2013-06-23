@@ -49,4 +49,4 @@ developers have helped make the HTML5 Boilerplate what it is today.
 
 ## Custom version
 
-This version also include custom sass mixin, modules, classes and other and haml
+This version requires [FireApp](https://github.com/handlino/FireApp) and also include custom sass mixin, modules, classes and other and haml
