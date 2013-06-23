@@ -1,0 +1,60 @@
+// Sticky Footer
+=stickyfooter($footerHeight: 60px)
+
+	html, body, #wrap
+		height: 100%
+
+	body > #wrap
+		height: auto
+		min-height: 100%
+
+	#main
+		padding-bottom: $footerHeight
+
+	#main-footer
+		position: relative
+		margin-top: -#{$footerHeight}
+		height: $footerHeight
+		clear: both
+
+// from akella https://github.com/akella
+
+// retina bg
+@mixin retina
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+		@content
+
+@mixin placeholder-color($color)
+	&:-moz-placeholder
+		color: $color
+	&::-webkit-input-placeholder
+		color: $color
+
+@mixin unselectable()
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+@mixin prevent-text()
+	-ms-word-break: break-all
+	word-break: break-all
+	word-break: break-word
+	-webkit-hyphens: auto
+	-moz-hyphens: auto
+	hyphens: auto
+
+@mixin font-smoothing($val: antialiased)
+	-webkit-font-smoothing: $val
+	-moz-font-smoothing: $val
+	-ms-font-smoothing: $val
+	-o-font-smoothing: $val
+
+@mixin selection
+	& ::selection
+		@content
+
+	& ::-moz-selection
+		@content
